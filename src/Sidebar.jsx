@@ -11,6 +11,10 @@ const Sidebar = (props) => {
       {props.sayiListesi.map((value,i) => (
         <button key={i} onClick={() => props.artırParams(value.value)}>{value.text}</button>
       ))}
+      <br/>
+      {props.sayiListesi.map((value,i) => (
+        <button key={i} onClick={() => props.artırParams(-value.value)}>{value.text}</button>
+      ))}
     </div>
   );
 };
